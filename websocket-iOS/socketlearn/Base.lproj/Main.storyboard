@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tVo-YU-0uF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7cN-aQ-zSZ">
+            <objects>
+                <viewController id="tVo-YU-0uF" customClass="ViewController" customModule="socketlearn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n0B-cO-HCa"/>
+                        <viewControllerLayoutGuide type="bottom" id="bmt-vm-RQF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cFe-t1-zQL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-6i-Dut">
+                                <rect key="frame" x="67" y="167" width="245" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.76586345909999998" blue="0.36701100330000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2W4-qF-jW5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eBY-bX-sQE">
+                                <rect key="frame" x="67" y="301" width="245" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.76586345909999998" blue="0.36701100330000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="zR2-a3-2Ox"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="接收内容如下" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-fd-Wni">
+                                <rect key="frame" x="67" y="249" width="245" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gF1-eJ-pFv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送内容如下" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itQ-Fp-48h">
+                                <rect key="frame" x="67" y="106" width="245" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="b1u-KM-hbD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgM-s4-ZBx">
+                                <rect key="frame" x="112" y="211" width="155" height="30"/>
+                                <color key="backgroundColor" red="0.51141412880000003" green="1" blue="0.23628354779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="发送"/>
+                                <connections>
+                                    <action selector="sendMsg:" destination="tVo-YU-0uF" eventType="touchUpInside" id="gRn-0Q-e1t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJV-PL-dbo">
+                                <rect key="frame" x="106" y="519" width="166" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1912371947" blue="0.14414486900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="断开连接"/>
+                                <connections>
+                                    <action selector="disConnect:" destination="tVo-YU-0uF" eventType="touchUpInside" id="dHq-43-uAZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eBY-bX-sQE" firstAttribute="leading" secondItem="cFe-t1-zQL" secondAttribute="leadingMargin" constant="51" id="5i8-3B-KgQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eBY-bX-sQE" secondAttribute="trailing" constant="47" id="EYo-kP-mCN"/>
+                            <constraint firstItem="GgM-s4-ZBx" firstAttribute="top" secondItem="Hbs-6i-Dut" secondAttribute="bottom" constant="14" id="J4f-Lb-pYz"/>
+                            <constraint firstItem="vcC-fd-Wni" firstAttribute="top" secondItem="GgM-s4-ZBx" secondAttribute="bottom" constant="8" id="Ocs-oj-POR"/>
+                            <constraint firstItem="vcC-fd-Wni" firstAttribute="top" secondItem="Hbs-6i-Dut" secondAttribute="bottom" constant="52" id="Q0x-5Y-01e"/>
+                            <constraint firstItem="vcC-fd-Wni" firstAttribute="leading" secondItem="cFe-t1-zQL" secondAttribute="leadingMargin" constant="51" id="Uux-wh-NRP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="itQ-Fp-48h" secondAttribute="trailing" constant="47" id="VdZ-hE-Ikm"/>
+                            <constraint firstItem="Hbs-6i-Dut" firstAttribute="leading" secondItem="cFe-t1-zQL" secondAttribute="leadingMargin" constant="51" id="ZfM-cz-bbV"/>
+                            <constraint firstItem="bmt-vm-RQF" firstAttribute="top" secondItem="eBY-bX-sQE" secondAttribute="bottom" constant="216" id="cOU-9d-TcV"/>
+                            <constraint firstItem="Hbs-6i-Dut" firstAttribute="top" secondItem="itQ-Fp-48h" secondAttribute="bottom" constant="40" id="jO8-QY-fTF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GgM-s4-ZBx" secondAttribute="trailing" constant="92" id="og1-XK-afd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hbs-6i-Dut" secondAttribute="trailing" constant="47" id="qwJ-Km-lud"/>
+                            <constraint firstItem="itQ-Fp-48h" firstAttribute="leading" secondItem="cFe-t1-zQL" secondAttribute="leadingMargin" constant="51" id="r2M-bJ-IU1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vcC-fd-Wni" secondAttribute="trailing" constant="47" id="svJ-6e-pkX"/>
+                            <constraint firstItem="eBY-bX-sQE" firstAttribute="top" secondItem="vcC-fd-Wni" secondAttribute="bottom" constant="31" id="wvF-ZZ-NJ0"/>
+                            <constraint firstItem="GgM-s4-ZBx" firstAttribute="leading" secondItem="cFe-t1-zQL" secondAttribute="leadingMargin" constant="96" id="yRS-8I-Y6f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receivedTextfield" destination="eBY-bX-sQE" id="Mlk-MJ-and"/>
+                        <outlet property="sendTextField" destination="Hbs-6i-Dut" id="j1g-MM-3v2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1k3-c5-g8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1005.6" y="-350.37481259370315"/>
+        </scene>
+    </scenes>
+</document>

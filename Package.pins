@@ -1,0 +1,12 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "SocketIO",
+      "reason": null,
+      "repositoryURL": "https://github.com/socketio/socket.io-client-swift",
+      "version": "8.3.3"
+    }
+  ],
+  "version": 1
+}
